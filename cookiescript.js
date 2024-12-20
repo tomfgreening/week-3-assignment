@@ -13,10 +13,16 @@ const upgradesTableArray = [];
 
 const upgradesContainer = document.getElementById("upgradesShop");
 // I;m selecting my DOM element, so I can manipulate the upgrades shop DIV
-async function fetchShopUpgrades () {
-    const result = await fetch(
-        "https://cookie-upgrade-api.vercel.app/api/upgrades"
-    );
-    console.log(response);
+async function fetchShopUpgrades() {
+  const result = await fetch(
+    "https://cookie-upgrade-api.vercel.app/api/upgrades"
+  );
+  console.log(result);
+  const upgradeData = await result.json();
+  return upgradeData;
+  upgradesContainer.appendChild(upgradeData);
+  //I'm completley stuck on how to push the JSON data into the array
 }
 // The purpose of the above function is to fetch the shopupgrade data from the API. The 'await' stop the 'promise' error coming back when running.
+
+fetchShopUpgrades();
