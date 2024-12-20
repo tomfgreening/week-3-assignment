@@ -28,4 +28,11 @@ async function fetchShopUpgrades() {
 
 fetchShopUpgrades();
 
-async function renderShopUpgrades() {}
+async function renderShopUpgrades() {
+    const getShopItems = await fetchShopUpgrades ();
+    getShopItems.forEach(function(upgrade)){
+        const upgradename =
+        const upgradecost =
+        const upgradeCPSIncrease =
+    }
+}
