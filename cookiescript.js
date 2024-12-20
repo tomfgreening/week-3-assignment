@@ -20,9 +20,12 @@ async function fetchShopUpgrades() {
   console.log(result);
   const upgradeData = await result.json();
   return upgradeData;
+  const upgradesContainer = document.getElementById("upgradesShop");
   upgradesContainer.appendChild(upgradeData);
-  //I'm completley stuck on how to push the JSON data into the array
 }
 // The purpose of the above function is to fetch the shopupgrade data from the API. The 'await' stop the 'promise' error coming back when running.
+//I don't know why i'm unable to append to the DOM element?
 
 fetchShopUpgrades();
+
+async function renderShopUpgrades() {}
